@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+{% for book in books %}
+<article>
+    <h2><a href="{{ path('article', {'id': article.id}) }}">{{ book.title }}</a></h2>
+    <p>{{ book.content }}</p>
+</article>
+{% endfor %}
+{% endblock %}
